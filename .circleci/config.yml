@@ -1,7 +1,7 @@
 version: 2.1
 jobs:
   build:
-    working_directory: ~/next-redux1
+    working_directory: next-redux1
     docker:
       - image: circleci/node:10.16.3
     steps:
