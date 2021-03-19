@@ -8,12 +8,12 @@ jobs:
       - checkout
       - run:
           name: Update NPM
-          working_directory: next-redux1
           command: "sudo npm install -g npm@5"
       - restore_cache:
           key: dependency-cache-{{ checksum "package-lock.json" }}
       - run:
           name: Install Dependencies
+          working_directory: next-redux1
           command: npm install
       - save_cache:
           key: dependency-cache-{{ checksum "package-lock.json" }}
@@ -21,4 +21,5 @@ jobs:
             - ./node_modules
       - run:
           name: Run tests
+          working_directory: next-redux1
           command: npm run test
