@@ -1,0 +1,33 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: k8s-web3-sv2-ap
+spec:
+  type: LoadBalancer
+  selector:
+    app: k8s-web3-sv2-ap
+  ports:
+  - protocol: TCP
+    port: 8084
+    targetPort: 3000
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: k8s-web3-sv2-ap
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: k8s-web3-sv2-ap
+  template:
+    metadata:
+      labels:
+        app: k8s-web3-sv2-ap
+    spec:
+      containers:
+      - image: lychee3/k8s-web3-sv2-ap:1.0
+        name: k8s-web3-sv2-ap
+        ports:
+        - containerPort: 3000
+          name: k8s-web3-sv2-ap

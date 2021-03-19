@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "ミルモ",
+    "instrument": "マラカス",
+    "sweets": "チョコレート"
+  },
+  {
+    "id": 2,
+    "name": "リルム",
+    "instrument": "タンバリン",
+    "sweets": "シュークリーム"
+  },
+  {
+    "id": 3,
+    "name": "ヤシチ",
+    "instrument": "トライアングル",
+    "sweets": "かりんとう"
+  },
+  {
+    "id": 4,
+    "name": "ムルモ",
+    "instrument": "小太鼓",
+    "sweets": "マシュマロ"
+  }
+]
