@@ -10,10 +10,18 @@ jobs:
           name: Update NPM
           command: "sudo npm install -g npm@5"
       - run:
-          name: Install Dependencies
+          name: Install Dependencies (next-redux1)
           working_directory: next-redux1
           command: npm install
       - run:
-          name: Run tests
+          name: Run tests (next-redux1)
           working_directory: next-redux1
+          command: npm run test
+      - run:
+          name: Install Dependencies (next-redux2)
+          working_directory: next-redux2
+          command: npm install
+      - run:
+          name: Run tests (next-redux2)
+          working_directory: next-redux2
           command: npm run test
