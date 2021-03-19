@@ -18,13 +18,13 @@ jobs:
           node-version: '12.x'
       - name: Install Dependencies (next-redux1)
         run: npm install
-        working_directory: ./next-redux1
+        working-directory: ./next-redux1
       - name: Run test (next-redux1)
         run: npm test
-        working_directory: ./next-redux1
+        working-directory: ./next-redux1
       - name: Install Dependencies (next-redux2)
         run: npm install
-        working_directory: ./next-redux2
+        working-directory: ./next-redux2
       - name: Run test (next-redux2)
         run: npm test
-        working_directory: ./next-redux2
+        working-directory: ./next-redux2
